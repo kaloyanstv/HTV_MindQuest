@@ -9,13 +9,16 @@ public class ProgressController : ControllerBase
     private readonly AppDbContext _db;
     public ProgressController(AppDbContext db) => _db = db;
 
-    // Get progress for the current user
+    // Get progress for the current user (or static anonymous user if not authenticated)
     [HttpGet("me")]
-    [Authorize]
     public async Task<IActionResult> GetMyProgress()
     {
         var username = User.Identity?.Name;
-        if (username == null) return Unauthorized();
+        if (username == null)
+        {
+            // fall back to static username so anonymous users can access progress
+            username = StaticAuthStore.Username;
+        }
 
         var user = await _db.Users.FirstOrDefaultAsync(u => u.Username == username);
         if (user == null) return NotFound();

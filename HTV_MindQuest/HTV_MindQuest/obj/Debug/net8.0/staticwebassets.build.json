@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "AgxmqHYc5lXcRXpXnTiSpAun6KcpX9NiYZYfNzFC2cI=",
+  "Source": "HTV_MindQuest",
+  "BasePath": "_content/HTV_MindQuest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "HTV_MindQuest/wwwroot",
+      "Source": "HTV_MindQuest",
+      "ContentRoot": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/",
+      "BasePath": "_content/HTV_MindQuest",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/css/styles.css",
+      "SourceId": "HTV_MindQuest",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/",
+      "BasePath": "_content/HTV_MindQuest",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/styles.css"
+    },
+    {
+      "Identity": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/index.html",
+      "SourceId": "HTV_MindQuest",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/",
+      "BasePath": "_content/HTV_MindQuest",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    },
+    {
+      "Identity": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/js/app.js",
+      "SourceId": "HTV_MindQuest",
+      "SourceType": "Discovered",
+      "ContentRoot": "/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/wwwroot/",
+      "BasePath": "_content/HTV_MindQuest",
+      "RelativePath": "js/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/js/app.js"
+    }
+  ]
+}

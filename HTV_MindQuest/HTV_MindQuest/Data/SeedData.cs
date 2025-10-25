@@ -8,8 +8,28 @@ db.SaveChanges();
 
 
 if (!db.Users.Any()) {
-db.Users.Add(new User { Username = "kid1", Password = "password", Points = 0 });
-db.SaveChanges();
+	// Seed a default user. The application uses PasswordHash (BCrypt) for login verification.
+	// Keep the plain Password for compatibility (e.g. UI/tests), but ensure PasswordHash is set.
+	db.Users.Add(new User {
+		Username = "kid1",
+		Password = "password",
+		PasswordHash = BCrypt.Net.BCrypt.HashPassword("password"),
+		Points = 0
+	});
+	db.SaveChanges();
+}
+else
+{
+	// If users exist but some lack a PasswordHash (seeded earlier without hashing), hash their plain Password now.
+	var usersToUpdate = db.Users.Where(u => string.IsNullOrEmpty(u.PasswordHash) && !string.IsNullOrEmpty(u.Password)).ToList();
+	if (usersToUpdate.Any())
+	{
+		foreach (var u in usersToUpdate)
+		{
+			u.PasswordHash = BCrypt.Net.BCrypt.HashPassword(u.Password);
+		}
+		db.SaveChanges();
+	}
 }
 }
 }

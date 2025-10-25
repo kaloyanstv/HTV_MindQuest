@@ -1,29 +1,47 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>BrainQuest</title>
-<link rel="stylesheet" href="/css/styles.css">
+    <meta charset="UTF-8">
+    <title>MindQuest</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input, button { margin: 5px; padding: 5px; }
+        #game-area { margin-top: 20px; }
+        /* Memory match styles */
+        .memory-grid { display: grid; grid-template-columns: repeat(4, 80px); gap: 8px; justify-content: start; }
+        .memory-card { width: 80px; height: 80px; display:flex;align-items:center;justify-content:center; background:#2e86de; color:white; font-size:32px; cursor:pointer; border-radius:6px; }
+        .memory-card.flipped { background:#f1c40f; color:#222; }
+    </style>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<div class="app">
-<header>
-<h1>BrainQuest</h1>
-<div id="userArea">
-<input id="username" placeholder="username">
-<input id="password" type="password" placeholder="password">
-<button id="btnLogin">Login</button>
-<div id="badgeArea"></div>
-</div>
-</header>
+    <div class="app">
+        <header>
+            <h1>MindQuest</h1>
+            <div class="controls">
+                <input id="username" placeholder="Enter your name" aria-label="Player name" />
+                <button id="start-game">Play Random</button>
+                <button id="memory-match" class="secondary">Memory Match</button>
+                <button id="pattern-logic" class="secondary">Pattern Logic</button>
+                <button id="timed-math" class="secondary">Timed Math</button>
+                <button id="simon-says" class="secondary">Simon Says</button>
+            </div>
+        </header>
 
+        <main>
+            <section id="game-area"></section>
+            <aside class="sidebar">
+                <div class="score-box">
+                    <div class="muted">Player</div>
+                        <div id="score">No game played yet</div>
+                    <div class="muted" style="margin-top:8px;font-size:12px">Tip: Use keyboard (Enter/Space) to interact with cards and options.</div>
+                </div>
+            </aside>
+        </main>
+    </div>
 
-<main>
-<section id="gameList"></section>
-<section id="gameArea"></section>
-</main>
-</div>
-<script src="/js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html>
+
+

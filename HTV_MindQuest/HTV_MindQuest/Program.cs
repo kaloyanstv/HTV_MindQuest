@@ -1,54 +1,28 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
+using System.Collections.Concurrent;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-// Database
-builder.Services.AddDbContext<AppDbContext>(opt =>
-    opt.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-
-// JWT Auth
-var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"] ?? "super_secret_key_123!");
-builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    .AddJwtBearer(options =>
-    {
-        options.TokenValidationParameters = new TokenValidationParameters
-        {
-            ValidateIssuer = false,
-            ValidateAudience = false,
-            ValidateIssuerSigningKey = true,
-            IssuerSigningKey = new SymmetricSecurityKey(key)
-        };
-    });
-builder.Services.AddAuthorization();
-builder.Services.AddCors(p => p.AddDefaultPolicy(b =>
-    b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
-
 var app = builder.Build();
 
-// Middleware
-if (app.Environment.IsDevelopment())
+app.UseDefaultFiles();  // serves index.html by default
+app.UseStaticFiles();   // serves JS/CSS files
+
+// In-memory score storage
+var scores = new ConcurrentDictionary<string, int>();
+
+// Endpoint to submit score
+app.MapPost("/submit-score", async (HttpContext context) =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    var gameScore = await context.Request.ReadFromJsonAsync<GameScore>();
+    if (gameScore == null || string.IsNullOrWhiteSpace(gameScore.Username))
+        return Results.BadRequest(new { message = "Invalid username" });
 
-app.UseCors();
-app.UseAuthentication();
-app.UseAuthorization();
-
-app.MapControllers();
-
-// Static frontend
-app.UseDefaultFiles();
-app.UseStaticFiles();
+    scores.AddOrUpdate(gameScore.Username, gameScore.Points, (_, old) => old + gameScore.Points);
+    return Results.Ok(new { username = gameScore.Username, totalScore = scores[gameScore.Username] });
+});
 
 app.Run();
+
+record GameScore(string Username, int Points);
+
+
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HTV_MindQuest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56f90f643abec78b31f4502a0f8f55af83fd2a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b6b8bb8fadc4031a294ec18613409b4936ca628")]
 [assembly: System.Reflection.AssemblyProductAttribute("HTV_MindQuest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HTV_MindQuest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
