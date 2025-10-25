@@ -1,0 +1,6 @@
+@HTV_MindQuest_HostAddress = http://localhost:5237
+
+GET {{HTV_MindQuest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
