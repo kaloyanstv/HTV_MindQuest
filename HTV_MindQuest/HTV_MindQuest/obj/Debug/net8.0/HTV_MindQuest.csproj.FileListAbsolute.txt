@@ -1,0 +1,8 @@
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.csproj.AssemblyReference.cache
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.AssemblyInfoInputs.cache
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.AssemblyInfo.cs
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.csproj.CoreCompileInputs.cache
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.MvcApplicationPartsAssemblyInfo.cs
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.MvcApplicationPartsAssemblyInfo.cache
+/mnt/6e4f0692-c154-45fe-953a-5f75caddfccd/Projects/HTV_MindQuest/HTV_MindQuest/HTV_MindQuest/obj/Debug/net8.0/HTV_MindQuest.sourcelink.json
